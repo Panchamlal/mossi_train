@@ -18,6 +18,15 @@ def mean(num_list):
     -------
     mean : float
     """
+    # Check that input is type list
+    if not isinstance(num_list, list):
+        raise TypeError('Invalid input {} - Input must be of type list'.format(str(num_list)))
+
+    # check that list is not empty
+    if len(num_list) == 0:
+        raise ValueError('enetered list of numbers is empty')
+
+
     sum = 0.0
     for num in num_list:
         sum = num + sum
