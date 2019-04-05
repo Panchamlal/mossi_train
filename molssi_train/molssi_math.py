@@ -26,15 +26,17 @@ def mean(num_list):
     if len(num_list) == 0:
         raise ValueError('enetered list of numbers is empty')
 
-
     sum = 0.0
     for num in num_list:
-        sum = num + sum
+        try:
+            sum = num + sum
+        except TypeError:
+            raise('Cannot Calculate mean of list - all elements must be of type int/float')
 
     mean = sum / len(num_list)
-    print("The mean of list {} is {}".format(num_list, mean))
+    # print("The mean of list {} is {}".format(num_list, mean))
 
-    return None
+    return mean
 
 
 def canvas(with_attribution=True):
