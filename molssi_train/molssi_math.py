@@ -5,6 +5,7 @@ This is the project for molssi training.
 Some math functions
 """
 
+
 def mean(num_list):
     """
     Calculate the mean/average of a list of numbers
@@ -21,13 +22,10 @@ def mean(num_list):
     for num in num_list:
         sum = num + sum
 
-    mean = sum/len(num_list)
+    mean = sum / len(num_list)
     print("The mean of list {} is {}".format(num_list, mean))
 
     return None
-
-
-
 
 
 def canvas(with_attribution=True):
