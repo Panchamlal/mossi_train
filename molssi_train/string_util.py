@@ -6,6 +6,7 @@ Some string processing functions
 
 """
 
+
 def title_case(sentence):
     """
     Converts enetered string into the title_case
@@ -32,6 +33,6 @@ def title_case(sentence):
 
     for words in list_of_word:
         words = words[0].upper() + words[1:].lower()
-        title_case_sentence =  title_case_sentence + " " + words
+        title_case_sentence = title_case_sentence + " " + words
 
     return title_case_sentence
