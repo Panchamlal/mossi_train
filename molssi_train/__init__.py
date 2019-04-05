@@ -4,7 +4,8 @@ This is the project for molssi training.
 """
 
 # Add imports here
-from .molssi_math import *
+from .molssi_math import canvas, mean
+from .string_util import title_case
 
 # Handle versioneer
 from ._version import get_versions
