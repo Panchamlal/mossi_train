@@ -28,11 +28,19 @@ def title_case(sentence):
 
     >>>
     """
-    title_case_sentence = ""
-    list_of_word = sentence.split(' ')
+    # Check that input is a string
+    if not isinstance(sentence, str):
+        raise TypeError('Invalid input {} - Input must be of type string'.format(sentence))
 
-    for words in list_of_word:
+    # Error if empty StRING
+    if len(sentence) == 0:
+        raise ValueError('Cannot apply title case to empty string')
+
+    title_case_sentence = ""
+    list_of_words = sentence.split(' ')
+
+    for words in list_of_words:
         words = words[0].upper() + words[1:].lower()
         title_case_sentence = title_case_sentence + " " + words
 
-    return title_case_sentence
+    return title_case_sentence.strip()
