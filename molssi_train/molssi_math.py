@@ -2,8 +2,32 @@
 molssi_math.py
 This is the project for molssi training.
 
-Handles the primary functions
+Some math functions
 """
+
+def mean(num_list):
+    """
+    Calculate the mean/average of a list of numbers
+
+    Parameters
+    -----------
+    num_list: The list of number
+
+    Returns
+    -------
+    mean : float
+    """
+    sum = 0.0
+    for num in num_list:
+        sum = num + sum
+
+    mean = sum/len(num_list)
+    print("The mean of list {} is {}".format(num_list, mean))
+
+    return None
+
+
+
 
 
 def canvas(with_attribution=True):
